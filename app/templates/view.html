@@ -9,8 +9,8 @@
         <li class="list-group-item">Name: {{ city.name }}</li>
         <li class="list-group-item">Movie: {{ city.movie }}</li>
     </ul>
-    <div class="card-body">
-        <a href="/edit/{{city.id}}" class="card-link btn btn-primary">Edit</a>
+    <div class="btn-group">
+        <a href="/edit/{{city.id}}" class="btn btn-primary">Edit</a>
         <form action="/delete/{{city.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
     </div>
 </div>
