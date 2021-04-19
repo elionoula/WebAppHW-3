@@ -1,7 +1,7 @@
 CREATE DATABASE oscarData;
 use oscarData;
 
-CREATE TABLE IF NOT EXISTS oscar_age_female (
+CREATE TABLE IF NOT EXISTS oscarAgeFemale (
     `id` INT,
     `year` INT,
     `age` INT,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS oscar_age_female (
     PRIMARY KEY (`id`)
 );
 
-INSERT INTO oscar_age_female VALUES
+INSERT INTO oscarAgeFemale VALUES
     (1,1928,22,' "Janet Gaynor"',' "Seventh Heaven  Street Angel and Sunrise"'),
     (2,1929,37,' "Mary Pickford"',' "Coquette"'),
     (3,1930,28,' "Norma Shearer"',' "The Divorcee"	'),
