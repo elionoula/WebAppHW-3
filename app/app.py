@@ -112,7 +112,13 @@ def api_add() -> str
 
 @app.route('/api/v1/oscar/<int:city_id>', methods=['PUT'])
 def api_edit(city_id) -> str:
-    resp = Response(status=201, mimetype='application/json')
+    cursor = mysql.get_db().cursor()
+    content = request.json
+    inputData = (content['year'], content['age'], content['name'], content['movie'], city_id)
+    sql_update_query = """UPDATE oscarAgeFemale t SET t.year = %s, t.age = %s, t.name = %s, t.movie =  %s WHERE t.id = %s """
+    cursor.execute(sql_update_query, inputData)
+    mysql.get_db().commit()
+    resp = Response(status=200, mimetype='application/json')
     return resp
 
 
