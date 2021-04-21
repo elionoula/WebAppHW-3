@@ -99,7 +99,7 @@ def api_retrieve(city_id) -> str:
 
 
 @app.route('/api/v1/oscar/', methods=['POST'])
-def api_add() -> str
+def api_add() -> str:
     content = request.json
     cursor = mysql.get_db().cursor()
     inputData = (content['id'], content['year'], content['age'], content['name'], content['movie'])
