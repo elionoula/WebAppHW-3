@@ -63,7 +63,7 @@ def form_insert_post():
     cursor = mysql.get_db().cursor()
     inputData = (request.form.get('id'), request.form.get('year'), request.form.get('age'),
                  request.form.get('name'), request.form.get('movie'))
-    sql_insert_query = """INSERT INTO oscarAgeFemale (id,`year`,age,`name`,movie) VALUES (%s, %s,%s, %s,%s) """
+    sql_insert_query = """INSERT INTO oscarAgeFemale (id, year,age,name,movie) VALUES (%s, %s,%s, %s,%s) """
     cursor.execute(sql_insert_query, inputData)
     mysql.get_db().commit()
     return redirect("/", code=302)
@@ -104,7 +104,7 @@ def api_add() -> str:
     cursor = mysql.get_db().cursor()
     inputData = (content['id'], content['year'], content['age'],
                  content['name'], content['movie'])
-    sql_insert_query = """INSERT INTO oscarAgeFemale (id,`year`,age,`name`,movie) VALUES (%s, %s,%s, %s,%s) """
+    sql_insert_query = """INSERT INTO oscarAgeFemale (id,year,age,name,movie) VALUES (%s, %s,%s, %s,%s) """
     cursor.execute(sql_insert_query, inputData)
     mysql.get_db().commit()
     resp = Response(status=201, mimetype='application/json')

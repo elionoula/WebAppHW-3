@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS oscarAgeFemale (
     PRIMARY KEY (`id`)
 );
 
-INSERT INTO oscarAgeFemale VALUES
+INSERT INTO oscarAgeFemale (id,year,age,name,movie) VALUES
     (1,1928,22,' "Janet Gaynor"',' "Seventh Heaven  Street Angel and Sunrise"'),
     (2,1929,37,' "Mary Pickford"',' "Coquette"'),
     (3,1930,28,' "Norma Shearer"',' "The Divorcee"	'),
